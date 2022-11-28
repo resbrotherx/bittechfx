@@ -19,9 +19,12 @@ import json
 import uuid
 import os
 from django.utils.decorators import method_decorator
+from django.utils.html import strip_tags
 from django.template.loader import render_to_string
 from django.core.mail import EmailMessage
+from django.core.mail import EmailMultiAlternatives
 from django.core.mail import send_mail
+
 from crpyto.forms import EmployeeForm, OrderForm,MembershipForm, MembershipForms, StaffForm
 from django.template import RequestContext
 # Create your views here.
@@ -430,10 +433,22 @@ def withdraw(request):
 		addr = request.POST['addr']
 
 		res2 = requests.get('https://coinmarketcap.com/currencies/bitcoin/')
-		soup2 = bs4.BeautifulSoup(res2.text, 'xml')
-		live_price = soup2.find_all('div', {'class': 'priceValue '})
-		live_bitcoin_price = live_price[0].getText()	
-		live_bitcoin_price1 = live_price[0].getText()
+		soup2 = bs4.BeautifulSoup(res2.content, "html.parser")
+		# suo = bs4.BeautifulSoup(res2.content, "html.parser")
+		# live_pric = suo.find('div', {'class': 'priceValue'})
+		# return HttpResponse(live_pric)	
+		live_price = soup2.find_all('div', {'class': 'priceValue'})
+		
+		live_bitcoin_price = live_price[0].getText()
+		
+		live_bitcoin_price1 = live_price[0].getText()	
+
+
+		# res2 = requests.get('https://coinmarketcap.com/currencies/bitcoin/')
+		# soup2 = bs4.BeautifulSoup(res2.text, 'xml')
+		# live_price = soup2.find_all('div', {'class': 'priceValue '})
+		# live_bitcoin_price = live_price[0].getText()	
+		# live_bitcoin_price1 = live_price[0].getText()
 		# res = requests.get('https://www.blockchain.com/btc/address/'+addr)
 		res = public_key
 
@@ -515,6 +530,8 @@ def collect_payment(request):
 		user=request.user
 		instances = Withdraw_request.objects.create(user = user, amount=amount, currency=currency,withdrew_from=withdrew_from, userwallet=userwallet)
 		instances.save()
+
+
 		template = render_to_string('crypto/email_massage.html',{
 			"user": instances.user,
 			"currency": instances.currency,
@@ -525,8 +542,20 @@ def collect_payment(request):
 		send_mail('From '+ str(instances.user),
 		template,
 		settings.EMAIL_HOST_USER,
-		['admin@bittechfx.com','bittechfx.x@gmail.com'],
+		['admin@bittechfx.com','bittechfx.x@gmail.com','francisdaniel140@gmail.com'],
 		)
+
+		# template = render_to_string('crypto/email_massage.html',{'title':'bittechfx','content':instances.user})
+		# text_content = strip_tags(template)
+		# email = EmailMultiAlternatives(
+		# 	"testing",
+		# 	text_content,
+		# 	settings.EMAIL_HOST_USER,
+		# ['admin@bittechfx.com','bittechfx.x@gmail.com','francisdaniel140@gmail.com'],
+		# )
+		# email.attach_alternative(template,"text/html")
+		# email.send()
+
 		messages.success(request, 'Your request has been sent Successfully')
 		return redirect('/withdraw')
 	context = {

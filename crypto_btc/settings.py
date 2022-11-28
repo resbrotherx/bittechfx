@@ -24,9 +24,9 @@ mimetypes.add_type("text/css", ".css", True)
 SECRET_KEY = 'django-insecure-&y0bdgbdby06172n&3en==c+^a3ge%n^n+#&v#7e428!-q)@f6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['198.199.67.68','www.bittechfx.com','bittechfx.com']
+ALLOWED_HOSTS = ['194.195.125.127','www.bittechfx.com','bittechfx.com']
 
 
 # Application definition
@@ -122,12 +122,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 
-STATIC_URL = '/static/'
+
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'static')
 # ]
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
@@ -156,29 +157,29 @@ MESSAGE_TAGS = {
 
 # 465
 # 587 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'mail.privateemail.com'
-# EMAIL_PORT = 465
-# EMAIL_HOST_USER = 'support@bitechfx.com'
-# EMAIL_HOST_PASSWORD = 'Bitechfx.x101'
-# EMAIL_USE_TLS = False
-# EMAIL_USE_SSL = True
-
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.titan.email'
+EMAIL_HOST = 'mail.privateemail.com'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'support@bitechfx.com'
 EMAIL_HOST_PASSWORD = 'Bitechfx.x101'
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
-# # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.titan.email'
+# EMAIL_PORT = 465
+# EMAIL_HOST_USER = 'support@bitechfx.com'
+# EMAIL_HOST_PASSWORD = 'Bitechfx.x101'
+# EMAIL_USE_TLS = False
+# EMAIL_USE_SSL = True
+
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_PORT = 587
-# EMAIL_HOST_USER = 'Bittechfx.x@gmail.com'
-# EMAIL_HOST_PASSWORD = 'Drift101'
+# EMAIL_HOST_USER = 'support@bitechfx.com'
+# EMAIL_HOST_PASSWORD = 'Bitechfx.x101'
 # EMAIL_USE_TLS = True
-# # EMAIL_USE_SSL = True
+# EMAIL_USE_SSL = True
 
 
 ########################
