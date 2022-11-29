@@ -185,7 +185,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'support@bitechfx.com'
 EMAIL_HOST_PASSWORD = 'Bitechfx.x101'
-EMAIL_USE_TLS = True
+EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
 
