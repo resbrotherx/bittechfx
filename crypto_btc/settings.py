@@ -175,8 +175,8 @@ MESSAGE_TAGS = {
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.titan.email'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'payment@bitechfx.com'
-EMAIL_HOST_PASSWORD = 'Bitechfx.x101'
+EMAIL_HOST_USER = 'admin@bitechfx.com'
+EMAIL_HOST_PASSWORD = 'FxAdmin101'
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
