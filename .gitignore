@@ -1,0 +1,154 @@
+*.pyc
+*/*.pyc
+*/*/*.pyc
+node_modules
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+*.db
+*db.sqlite3
+
+# If your Django project includes a settings/local.py file, ignore it
+# as it usually contains local development settings
+settings/local.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+logs/
+*.log
+
+# Virtualenv
+# If you are using virtualenvwrapper
+pip-log.txt
+pip-delete-this-directory.txt
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+nosetests.xml
+coverage/
+
+# Static files
+staticfiles/
+static/
+media/
+mediafiles/
+
+# Django migrations
+*.pyc
+*.pyo
+*.pyd
+*.pyd
+*/migrations/*
+
+# Security
+secrets.json
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# celery beat schedule file
+celerybeat-schedule
+
+# Sphinx documentation
+docs/_build/
+*.rst
+*.md
+
+# PyInstaller
+# Usually these files are written by a python script from a template
+# before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Flask specific files
+instance/
+.webassets-cache
+
+# Scrapy specific files
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# pyenv
+.python-version
+
+# pipenv
+# Ignore the pipenv virtual environment directories
+pipenv/
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# celery beat schedule file
+celerybeat-schedule
+
+# dotenv
+.env
+
+# spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# End of https://www.toptal.com/developers/gitignore/api/django
