@@ -72,7 +72,7 @@ def register(request):
 					"user": username,
 					"email": emails
 				})
-				send_mail('From Bittechfx',
+				send_mail('From bittechfxhub',
 				template,
 				settings.EMAIL_HOST_USER,
 				[emails],
@@ -100,7 +100,7 @@ def register(request):
 					"user": username,
 					"email": emails
 				})
-				send_mail('From Bittechfx',
+				send_mail('From bittechfxhub',
 				template,
 				settings.EMAIL_HOST_USER,
 				[emails],

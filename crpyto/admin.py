@@ -2,9 +2,9 @@ from django.contrib import admin
 from .models import *
 
 
-admin.site.site_header = "Bittechfx"
-admin.site.site_title = "Bittechfx"
-admin.site.index_title = "Bittechfx"
+admin.site.site_header = "bittechfxhub"
+admin.site.site_title = "bittechfxhub"
+admin.site.index_title = "bittechfxhub"
 # admin.site.register(User_ip)
 admin.site.register(Details)
 admin.site.register(Userwallet)
