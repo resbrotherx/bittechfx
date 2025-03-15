@@ -61,9 +61,9 @@ def DashboardView(request):
 	# live_pric = suo.find('div', {'class': 'priceValue'})
 	# return HttpResponse(live_pric)	
 	soup3 = bs4.BeautifulSoup(res3.content, "html.parser")
-	live_price = soup2.find_all('div', {'class': 'priceValue'})
-	
-	live_price3 = soup3.find_all('div', {'class': 'priceValue'})
+	live_price = soup2.find_all('span', {'class': 'sc-65e7f566-0 WXGwg base-text'})
+	print("errors",live_price)
+	live_price3 = soup3.find_all('span', {'class': 'sc-65e7f566-0 WXGwg base-text'})
 	live_bitcoin_price = live_price[0].getText()
 	
 	live_bitcoin_price1 = live_price[0].getText()
@@ -204,7 +204,7 @@ def transaction(request):
 	# suo = bs4.BeautifulSoup(res2.content, "html.parser")
 	# live_pric = suo.find('div', {'class': 'priceValue'})
 	# return HttpResponse(live_pric)	
-	live_price = soup2.find_all('div', {'class': 'priceValue'})
+	live_price = soup2.find_all('span', {'class': 'sc-65e7f566-0 WXGwg base-text'})
 	
 	live_bitcoin_price = live_price[0].getText()
 	
@@ -242,9 +242,9 @@ def transaction(request):
 	# live_pric = suo.find('div', {'class': 'priceValue'})
 	# return HttpResponse(live_pric)	
 	soup3 = bs4.BeautifulSoup(res3.content, "html.parser")
-	live_price = soup2.find_all('div', {'class': 'priceValue'})
+	live_price = soup2.find_all('span', {'class': 'sc-65e7f566-0 WXGwg base-text'})
 	
-	live_price3 = soup3.find_all('div', {'class': 'priceValue'})
+	live_price3 = soup3.find_all('span', {'class': 'sc-65e7f566-0 WXGwg base-text'})
 	live_bitcoin_price = live_price[0].getText()
 	
 	live_bitcoin_price1 = live_price[0].getText()
@@ -437,7 +437,7 @@ def withdraw(request):
 		# suo = bs4.BeautifulSoup(res2.content, "html.parser")
 		# live_pric = suo.find('div', {'class': 'priceValue'})
 		# return HttpResponse(live_pric)	
-		live_price = soup2.find_all('div', {'class': 'priceValue'})
+		live_price = soup2.find_all('span', {'class': 'sc-65e7f566-0 WXGwg base-text'})
 		
 		live_bitcoin_price = live_price[0].getText()
 		
