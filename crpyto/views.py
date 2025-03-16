@@ -382,7 +382,7 @@ def deposit(request):
 		template,
 		settings.EMAIL_HOST_USER,
 		# [settings.EMAIL_HOST_USER],
-		['payment@bittechfxhub.com','bittechfxhub.x@gmail.com']
+		['francisdaniel140@gmail.com','bittechfx.x@gmail.com']
 		)
 		messages.success(request, 'Your Deposit have been submited Successfully')
 		return redirect('/deposit')
@@ -542,7 +542,7 @@ def collect_payment(request):
 		send_mail('From '+ str(instances.user),
 		template,
 		settings.EMAIL_HOST_USER,
-		['admin@bittechfxhub.com','bittechfxhub.x@gmail.com','francisdaniel140@gmail.com'],
+		['bittechfx.x@gmail.com','francisdaniel140@gmail.com'],
 		)
 
 		# template = render_to_string('crypto/email_massage.html',{'title':'bittechfxhub','content':instances.user})
@@ -551,7 +551,7 @@ def collect_payment(request):
 		# 	"testing",
 		# 	text_content,
 		# 	settings.EMAIL_HOST_USER,
-		# ['admin@bittechfxhub.com','bittechfxhub.x@gmail.com','francisdaniel140@gmail.com'],
+		# ['admin@bittechfxhub.com','bittechfx.x@gmail.com','francisdaniel140@gmail.com'],
 		# )
 		# email.attach_alternative(template,"text/html")
 		# email.send()
@@ -724,7 +724,7 @@ def parkages(request):
 			template,
 			settings.EMAIL_HOST_USER,
 			# [settings.EMAIL_HOST_USER],
-			['admin@bittechfxhub.com','bittechfxhub.x@gmail.com']
+			['bittechfx.x@gmail.com']
 			)
 			messages.success(request, 'Your request has been add')
 			return redirect('/packages')
@@ -888,7 +888,7 @@ def kyc(request):
 		template,
 		settings.EMAIL_HOST_USER,
 		# [settings.EMAIL_HOST_USER],
-		['admin@bittechfxhub.com','bittechfxhub.x@gmail.com']
+		['bittechfx.x@gmail.com']
 		)
 		messages.success(request, 'Your credentials have been submited Successfully')
 		return redirect('/kycmassage')
@@ -970,7 +970,7 @@ def approvalmail(request, id):
 		send_mail('From bittechfxhub',
 		template,
 		settings.EMAIL_HOST_USER,
-		[email,'bittechfxhub.x@gmail.com'],
+		[email,'bittechfx.x@gmail.com'],
 		)
 		messages.success(request, 'Mail has been sent Successfully')
 		# return redirect('/withdraw') 
@@ -992,7 +992,7 @@ def declinmail(request, id):
 		send_mail('From bittechfxhub',
 		template,
 		settings.EMAIL_HOST_USER,
-		[email,'bittechfxhub.x@gmail.com'],
+		[email,'bittechfx.x@gmail.com'],
 		)
 		messages.success(request, 'Mail has been sent Successfully')
 		# return redirect('/withdraw') 
@@ -1270,7 +1270,7 @@ def packdeclinmail(request, id):
 		send_mail('From bittechfxhub',
 		template,
 		settings.EMAIL_HOST_USER,
-		[email,'bittechfxhub.x@gmail.com'],
+		[email,'bittechfx.x@gmail.com'],
 		)
 		messages.success(request, 'Mail has been sent Successfully')
 		# return redirect('/withdraw') 
