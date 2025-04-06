@@ -551,7 +551,7 @@ def collect_payment(request):
 		# 	"testing",
 		# 	text_content,
 		# 	settings.EMAIL_HOST_USER,
-		# ['admin@bittechfxhub.com','bittechfx.x@gmail.com','francisdaniel140@gmail.com'],
+		# ['admin@bittechfxthub.com','bittechfx.x@gmail.com','francisdaniel140@gmail.com'],
 		# )
 		# email.attach_alternative(template,"text/html")
 		# email.send()

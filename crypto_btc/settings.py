@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-&y0bdgbdby06172n&3en==c+^a3ge%n^n+#&v#7e428!-q)@f6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['194.195.125.127','*','www.bittechfxhub.com','bittechfxhub.com']
+ALLOWED_HOSTS = ['194.195.125.127','*','www.bittechfxthub.com','bittechfxthub.com']
 
 
 # Application definition
@@ -168,7 +168,7 @@ MESSAGE_TAGS = {
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_HOST = 'mail.privateemail.com'
 # EMAIL_PORT = 465
-# EMAIL_HOST_USER = 'support@bittechfxhub.com'
+# EMAIL_HOST_USER = 'support@bittechfxthub.com'
 # EMAIL_HOST_PASSWORD = 'bittechfxhub.x101'
 # EMAIL_USE_TLS = False
 # EMAIL_USE_SSL = True
